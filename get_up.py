@@ -99,17 +99,7 @@ def main(
         body = weather_message + early_message
     if is_get_up_early:
         issue.create_comment(body)
-        # send to telegram
-        if tele_token and tele_chat_id:
-            requests.post(
-                url="https://api.telegram.org/bot{0}/{1}".format(
-                    tele_token, "sendMessage"
-                ),
-                data={
-                    "chat_id": tele_chat_id,
-                    "text": body,
-                },
-            )
+       
     else:
         print("You wake up late")
 
@@ -124,18 +114,10 @@ if __name__ == "__main__":
     parser.add_argument(
         "--bing_cookie", help="bing_cookie", nargs="?", default="", const=""
     )
-    parser.add_argument(
-        "--tele_token", help="tele_token", nargs="?", default="", const=""
-    )
-    parser.add_argument(
-        "--tele_chat_id", help="tele_chat_id", nargs="?", default="", const=""
-    )
     options = parser.parse_args()
     main(
         options.github_token,
         options.repo_name,
         options.weather_message,
         options.bing_cookie,
-        options.tele_token,
-        options.tele_chat_id,
     )
