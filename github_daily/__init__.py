@@ -1,4 +1,3 @@
-from .cli import main
 from .from_issues import get_info_from_issue_comments
 from .runner import GTDRunner
 
