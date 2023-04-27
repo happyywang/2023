@@ -28,14 +28,14 @@ def get_info_from_issue_comments(me, issues, map_func, reduce_func=sum):
                 # becaue the format maybe wrong just pass
                 continue
             calendar_list.append(c.created_at)
-            month = pendulum.instance(c.created_at).in_timezone("Asia/Shanghai").month
+            month = pendulum.instance(c.created_at).in_timezone("Europe/Berlin").month
             if map_func == len:
                 month_summary_dict[month] += 1
             else:
                 month_summary_dict[month] += data
     end_date = pendulum.now("Asia/Shanghai")
     calendar_str_list = [
-        pendulum.instance(i).in_timezone("Asia/Shanghai").to_date_string()
+        pendulum.instance(i).in_timezone("Europe/Berlin").to_date_string()
         for i in calendar_list
     ]
     is_today_check = False
@@ -50,7 +50,7 @@ def get_info_from_issue_comments(me, issues, map_func, reduce_func=sum):
     # fuck pendulum's period
     periods = list(
         pendulum.period(
-            pendulum.instance(calendar_list[0]).in_timezone("Asia/Shanghai"), end_date
+            pendulum.instance(calendar_list[0]).in_timezone("Europe/Berlin"), end_date
         )
     )
     periods = [p.to_date_string() for p in periods]
