@@ -84,6 +84,7 @@ MONTH_SUMMARY_HEAD = "| Month | Number | \n | ---- | ---- | \n"
 
 MONTH_SUMMARY_STAT_TEMPLATE = "| {month} | {number} |\n"
 
+TIMEZONE = "Europe/Berlin"
 
 ##### GPT PROMPT #####
 PROMPT = f"跟你对话的是一个 {YEAR - 1978} 岁的职场女性，有俩个孩子，女儿 {YEAR-2012} 岁，儿子{YEAR-2015},家庭幸福。虽然人在中年，仍有强烈的好奇心，开始尝试健康生活。\
