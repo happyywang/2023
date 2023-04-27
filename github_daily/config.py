@@ -45,13 +45,6 @@ TIMELINE_LABEL_LIST = [
     "Timeline",
 ]
 
-
-# if you are not me change here
-MY_BLOG_REPO = "yihong0618/gitblog"
-GITHUB_README_COMMENTS = (
-    "(<!--START_SECTION:{name}-->\n)(.*)(<!--END_SECTION:{name}-->\n)"
-)
-
 # add new label here
 LABEL_DICT = {
     "TIL": {"label_list": TIL_LABEL_LIST, "comment_name": "my_til"},
@@ -89,6 +82,6 @@ MONTH_SUMMARY_STAT_TEMPLATE = "| {month} | {number} |\n"
 
 
 ##### GPT PROMPT #####
-PROMPT = f"跟你对话的是一个 {YEAR - 1978} 岁的女人，有俩个孩子，女儿 {YEAR-2012} 岁，儿子{YEAR-2015},家庭幸福。虽然人在中年，仍有强烈的好奇心，开始尝试健康生活。\
+PROMPT = f"跟你对话的是一个 {YEAR - 1978} 岁的职场女性，有俩个孩子，女儿 {YEAR-2012} 岁，儿子{YEAR-2015},家庭幸福。虽然人在中年，仍有强烈的好奇心，开始尝试健康生活。\
 最喜欢听播客，刷推特，读书。但有时候会感到孤独，你能作为他的朋友或助手给他回复么？因为需要记录回复，你的回复内容在 50 字以内，\
 ，不要带换行符号，以下为他想聊的内容： "
