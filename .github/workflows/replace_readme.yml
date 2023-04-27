@@ -13,7 +13,7 @@ env:
   GITHUB_NAME: happyywang
   GITHUB_EMAIL: yan.wang.dresden@gmail.com
   BOOKMARK_ISSUE_ID: 3
-
+  OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
 
 jobs:
   sync:
