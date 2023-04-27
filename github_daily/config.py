@@ -40,6 +40,10 @@ SQUAT_LABEL_LIST = [
     "Squat",
 ]
 
+PUSHUP_LABEL_LIST = [
+    "PushUps",
+]
+
 ### 2023 NEW ###
 TIMELINE_LABEL_LIST = [
     "Timeline",
