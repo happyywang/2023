@@ -45,6 +45,10 @@ TIMELINE_LABEL_LIST = [
     "Timeline",
 ]
 
+GITHUB_README_COMMENTS = (
+    "(<!--START_SECTION:{name}-->\n)(.*)(<!--END_SECTION:{name}-->\n)"
+)
+
 # add new label here
 LABEL_DICT = {
     "TIL": {"label_list": TIL_LABEL_LIST, "comment_name": "my_til"},
