@@ -30,6 +30,7 @@ class TimelineRunner(BaseRunner):
         self.timeline_issue = timeline_issues[0]
         self.show_day = "all"
         self.history = []  # for openai ask with history
+        openai.api = os.getenv("OPEN_API_KEY")
 
     def show(self):
         comments = self.timeline_issue.get_comments()
@@ -57,7 +58,7 @@ class TimelineRunner(BaseRunner):
         for h in self.history:
             ms.append({"role": "user", "content": h[0]})
             ms.append({"role": "assistant", "content": h[1]})
-        ms.append({"role": "user", "content": f"{timeline_string}"})
+        ms.append({"role": "user", "content": f"{timeline_string}"})        
         completion = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=ms,
