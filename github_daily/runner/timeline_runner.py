@@ -30,7 +30,7 @@ class TimelineRunner(BaseRunner):
         self.timeline_issue = timeline_issues[0]
         self.show_day = "all"
         self.history = []  # for openai ask with history
-        openai.api = os.getenv("OPEN_API_KEY")
+        openai.api = os.getenv("OPENAI_API_KEY")
 
     def show(self):
         comments = self.timeline_issue.get_comments()
