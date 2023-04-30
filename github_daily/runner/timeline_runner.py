@@ -3,13 +3,16 @@ import os
 import pendulum
 from datetime import datetime
 from github import Github
-from rich import print
+#from rich import print
+from rich.console import Console
 import openai
 from rich.table import Table
 
 from github_daily.config import TIMELINE_LABEL_LIST, REPO_NAME, TIMEZONE, PROMPT
 from github_daily.runner.base_runner import BaseRunner
 
+console = Console(file=sys.stdout, force_terminal=True, encoding="utf-8")
+print = console.print
 
 class TimelineRunner(BaseRunner):
     """
