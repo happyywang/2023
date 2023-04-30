@@ -52,26 +52,7 @@ def main():
         type=int,
         help="which to do to be undone",
     )
-    ########### FORST RUNNER ###########
-    forst = subparser.add_parser(name="forst")
-    forst.add_argument(
-        "-s",
-        "--show",
-        dest="show",
-        type=str,
-        default="today",
-        choices=["today", "yesterday", "all"],
-        help="show today forst table",
-    )
-    forst.add_argument(
-        "-sy",
-        "--sync",
-        dest="sync",
-        action="store_true",
-        help="if to sync the forst to GitHub",
-    )
-    forst.set_defaults(runner=ForstRunner)
-
+  
     ########### IDEA RUNNER ###########
     idea = subparser.add_parser(name="idea")
     idea.add_argument(
