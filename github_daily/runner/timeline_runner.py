@@ -46,7 +46,12 @@ class TimelineRunner(BaseRunner):
                 .to_date_string()
             )
             table.add_row(comment_day_string, comment.body)
-        print(table)
+        #print(table)
+        try:
+            print(table)
+        except UnicodeEncodeError:
+            print(table.encode('utf-8', errors='replace').decode('utf-8'))
+
 
     def _make_res(self, timeline_string):
         ms = []
