@@ -4,7 +4,6 @@
 import argparse
 
 from github_daily.runner import (
-    ForstRunner,
     GTDRunner,
     IdeaRunner,
     ReadRunner,
@@ -147,9 +146,6 @@ def main():
                     runner.done_or_undone(args.done, is_done=True)
                 if args.undone:
                     runner.done_or_undone(args.undone, is_done=False)
-        case "forst":
-            if args.sync:
-                runner.sync()
         case "idea" | "read" | "timeline" | "pushup":
             if args.add:
                 runner.add(args.add)
