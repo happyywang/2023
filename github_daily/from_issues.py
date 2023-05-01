@@ -33,7 +33,7 @@ def get_info_from_issue_comments(me, issues, map_func, reduce_func=sum):
                 month_summary_dict[month] += 1
             else:
                 month_summary_dict[month] += data
-    end_date = pendulum.now("Asia/Shanghai")
+    end_date = pendulum.now("Europe/Berlin")
     calendar_str_list = [
         pendulum.instance(i).in_timezone("Europe/Berlin").to_date_string()
         for i in calendar_list
