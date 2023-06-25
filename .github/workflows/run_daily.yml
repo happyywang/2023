@@ -3,7 +3,7 @@ name: Get Daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0,13 * * *"
+    - cron: "0 9,21 * * *"
 
 env:
   GITHUB_NAME: happyywang
